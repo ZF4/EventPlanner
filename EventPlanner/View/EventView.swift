@@ -21,6 +21,7 @@ struct EventView: View {
                 .fill(Color.white)
                 .shadow(color: .gray, radius: 4)
             
+            
             VStack {
                 cardDeatil
                 EventButton()
