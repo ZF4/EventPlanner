@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
+//For getting text justified alignment, not used right now
 struct LabelAlignment: UIViewRepresentable {
     var text: String
     var textAlignmentStyle : TextAlignmentStyle

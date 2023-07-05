@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1BFA942A55EE4900D1ED17 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1BFA932A55EE4900D1ED17 /* MainTabView.swift */; };
+		9F1BFA962A55EF2E00D1ED17 /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1BFA952A55EF2E00D1ED17 /* CalendarItem.swift */; };
+		9F1BFA9C2A55F31D00D1ED17 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1BFA9B2A55F31D00D1ED17 /* CalendarView.swift */; };
 		9FDA5FE62A4F41E100936D8A /* EventPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FE52A4F41E100936D8A /* EventPlannerApp.swift */; };
-		9FDA5FE82A4F41E100936D8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FE72A4F41E100936D8A /* ContentView.swift */; };
+		9FDA5FE82A4F41E100936D8A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FE72A4F41E100936D8A /* HomeView.swift */; };
 		9FDA5FEA2A4F41E300936D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA5FE92A4F41E300936D8A /* Assets.xcassets */; };
 		9FDA5FED2A4F41E300936D8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA5FEC2A4F41E300936D8A /* Preview Assets.xcassets */; };
 		9FDA5FF42A4F41FD00936D8A /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FF32A4F41FD00936D8A /* EventView.swift */; };
@@ -19,9 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F1BFA932A55EE4900D1ED17 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		9F1BFA952A55EF2E00D1ED17 /* CalendarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
+		9F1BFA9B2A55F31D00D1ED17 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		9FDA5FE22A4F41E100936D8A /* EventPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDA5FE52A4F41E100936D8A /* EventPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlannerApp.swift; sourceTree = "<group>"; };
-		9FDA5FE72A4F41E100936D8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9FDA5FE72A4F41E100936D8A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9FDA5FE92A4F41E300936D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FDA5FEC2A4F41E300936D8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FDA5FF32A4F41FD00936D8A /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F1BFA972A55F25900D1ED17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FDA5FFC2A4F5A7400936D8A /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F1BFA982A55F26800D1ED17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FDA5FE72A4F41E100936D8A /* HomeView.swift */,
+				9F1BFA9A2A55F2E000D1ED17 /* SupportingViews */,
+				9FDA5FF32A4F41FD00936D8A /* EventView.swift */,
+				9F1BFA952A55EF2E00D1ED17 /* CalendarItem.swift */,
+				9F1BFA9B2A55F31D00D1ED17 /* CalendarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F1BFA992A55F28600D1ED17 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9F1BFA932A55EE4900D1ED17 /* MainTabView.swift */,
+				9FDA5FE52A4F41E100936D8A /* EventPlannerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9F1BFA9A2A55F2E000D1ED17 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				9FDA5FF82A4F4F5300936D8A /* EventButton.swift */,
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
 		9FDA5FD92A4F41E100936D8A = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				9FDA5FF52A4F49C800936D8A /* Utility */,
-				9FDA5FE52A4F41E100936D8A /* EventPlannerApp.swift */,
-				9FDA5FE72A4F41E100936D8A /* ContentView.swift */,
-				9FDA5FF32A4F41FD00936D8A /* EventView.swift */,
-				9FDA5FFC2A4F5A7400936D8A /* Event.swift */,
-				9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */,
-				9FDA5FF82A4F4F5300936D8A /* EventButton.swift */,
+				9F1BFA992A55F28600D1ED17 /* App */,
+				9F1BFA982A55F26800D1ED17 /* View */,
+				9F1BFA972A55F25900D1ED17 /* Model */,
 				9FDA5FE92A4F41E300936D8A /* Assets.xcassets */,
 				9FDA5FEB2A4F41E300936D8A /* Preview Content */,
 			);
@@ -86,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				9FDA5FF62A4F4A1300936D8A /* RoundedCorners.swift */,
+				9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -160,11 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1BFA9C2A55F31D00D1ED17 /* CalendarView.swift in Sources */,
 				9FDA5FFB2A4F557100936D8A /* LabelAlignment.swift in Sources */,
 				9FDA5FF72A4F4A1300936D8A /* RoundedCorners.swift in Sources */,
 				9FDA5FF92A4F4F5300936D8A /* EventButton.swift in Sources */,
+				9F1BFA942A55EE4900D1ED17 /* MainTabView.swift in Sources */,
 				9FDA5FF42A4F41FD00936D8A /* EventView.swift in Sources */,
-				9FDA5FE82A4F41E100936D8A /* ContentView.swift in Sources */,
+				9F1BFA962A55EF2E00D1ED17 /* CalendarItem.swift in Sources */,
+				9FDA5FE82A4F41E100936D8A /* HomeView.swift in Sources */,
 				9FDA5FFD2A4F5A7400936D8A /* Event.swift in Sources */,
 				9FDA5FE62A4F41E100936D8A /* EventPlannerApp.swift in Sources */,
 			);

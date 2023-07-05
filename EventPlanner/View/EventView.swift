@@ -75,6 +75,7 @@ struct EventView: View {
             HStack {
                 Text(groupName)
                     .font(.system(size: 20, weight: .heavy))
+                    .frame(width: 50)
                     .padding(10)
                     .background(Color(groupColor))
                     .cornerRadius(10, corners: [.topLeft,.bottomRight])
@@ -88,6 +89,6 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(eventLocation: example1.eventLocation, evenTime: example1.eventTime, groupName: example1.groupName, eventName: example1.eventName, eventDesc: example1.eventDesc, groupColor: example1.groupColor)
+        EventView(eventLocation: example1.eventLocation, evenTime: example1.eventTime, groupName: example1.groupName, eventName: example1.eventName, eventDesc: example1.eventDesc ?? "", groupColor: example1.groupColor ?? "")
     }
 }

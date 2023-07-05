@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var cards = events
     
     var body: some View {
@@ -15,7 +15,7 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     ForEach(cards, id: \.self) { card in
-                        EventView(eventLocation: card.eventLocation, evenTime: card.eventTime, groupName: card.groupName, eventName: card.eventName, eventDesc: card.eventDesc, groupColor: card.groupColor)
+                        EventView(eventLocation: card.eventLocation, evenTime: card.eventTime, groupName: card.groupName, eventName: card.eventName, eventDesc: card.eventDesc ?? "", groupColor: card.groupColor ?? "")
                     }
                 }
                 .navigationTitle("117 Events")
@@ -27,6 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
