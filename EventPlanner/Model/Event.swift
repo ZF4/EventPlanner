@@ -17,6 +17,12 @@ struct Event: Hashable {
     var groupColor: String?
 }
 
+enum Group: String, CaseIterable {
+    case OG
+    case MXG
+    case MSG
+}
+
 var example1 = Event(groupName: "OG", eventName: "Retirement Ceremony", eventDesc: "Join us to celebrate the retirment ceremony of Lt Col Gunnoe. Snacks and refreshments will be provided. Early dismissal to follow.", eventLocation: "Wing Auditorium", eventTime: "1400", groupColor: "ogColor")
 
 var events: [Event] = [

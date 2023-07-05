@@ -12,28 +12,15 @@ struct CalendarView: View {
     
     var body: some View {
             List {
-                Section(header: Text("MXG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
+                #warning("Add more events to eventDemo")
+                ForEach(Group.allCases, id: \.self) { group in
+                    Section(header: Text(group.rawValue)) {
+                        ForEach(eventDemo.filter{ $0.groupName == group.rawValue }, id: \.self) { item in
+                            CalendarItem(event: item)
+                        }
+                        .onMove(perform: move)
+                        .onDelete(perform: delete)
                     }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
-                }
-                
-                Section(header: Text("MSG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
-                    }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
-                }
-                
-                Section(header: Text("OG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
-                    }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
                 }
             }
         .navigationTitle("Your Calendar 🗓️")
