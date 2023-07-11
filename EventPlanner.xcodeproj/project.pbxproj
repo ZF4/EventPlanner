@@ -20,6 +20,7 @@
 		9FDA5FFB2A4F557100936D8A /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */; };
 		9FDA5FFD2A4F5A7400936D8A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FFC2A4F5A7400936D8A /* Event.swift */; };
 		C6275BED2A58805A00EC5DC5 /* CalenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6275BEC2A58805A00EC5DC5 /* CalenderViewModel.swift */; };
+		C6E3E5912A5DB2D2007A60EA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3E5902A5DB2D2007A60EA /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAlignment.swift; sourceTree = "<group>"; };
 		9FDA5FFC2A4F5A7400936D8A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C6275BEC2A58805A00EC5DC5 /* CalenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewModel.swift; sourceTree = "<group>"; };
+		C6E3E5902A5DB2D2007A60EA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				9FDA5FF62A4F4A1300936D8A /* RoundedCorners.swift */,
 				9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */,
+				C6E3E5902A5DB2D2007A60EA /* Color+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				9F1BFA942A55EE4900D1ED17 /* MainTabView.swift in Sources */,
 				9FDA5FF42A4F41FD00936D8A /* EventView.swift in Sources */,
 				9F1BFA962A55EF2E00D1ED17 /* CalendarItem.swift in Sources */,
+				C6E3E5912A5DB2D2007A60EA /* Color+Extension.swift in Sources */,
 				C6275BED2A58805A00EC5DC5 /* CalenderViewModel.swift in Sources */,
 				9FDA5FE82A4F41E100936D8A /* HomeView.swift in Sources */,
 				9FDA5FFD2A4F5A7400936D8A /* Event.swift in Sources */,
