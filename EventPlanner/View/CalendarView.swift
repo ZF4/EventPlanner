@@ -1,54 +1,36 @@
-//
-//  CalendarView.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 7/5/23.
-//
-
 import SwiftUI
 
 struct CalendarView: View {
-    @State var eventDemo: [Event] = events
-    
+    @ObservedObject var events = EventViewModel()
+
     var body: some View {
             List {
-                Section(header: Text("MXG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
-                    }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
-                }
-                
-                Section(header: Text("MSG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
-                    }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
-                }
-                
-                Section(header: Text("OG")) {
-                    ForEach(eventDemo, id: \.self) { item in
-                        CalendarItem(event: item)
-                    }
-                    .onMove(perform: move)
-                    .onDelete(perform: delete)
-                }
+                ForEach(events.events, id: \.self) { item in
+                            CalendarItem(event: item)
+                        }
+                        .onMove(perform: move)
+                        .onDelete(perform: delete)
             }
         .navigationTitle("Your Calendar 🗓️")
         .toolbar {
-            EditButton()
+                EditButton()
+        }
+        .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                   Button(action: {}, label: {
+                       Image(systemName: "plus")
+                           .font(.system(size: 15))
+                   })
+            }
         }
     }
     
-    
      func move(_ fromOffSet: IndexSet, _ toOffSet: Int) {
-        eventDemo.move(fromOffsets: fromOffSet, toOffset: toOffSet)
+         events.events.move(fromOffsets: fromOffSet, toOffset: toOffSet)
     }
     
     func delete(at offSets: IndexSet) {
-        eventDemo.remove(atOffsets: offSets)
+        events.events.remove(atOffsets: offSets)
     }
 }
 
