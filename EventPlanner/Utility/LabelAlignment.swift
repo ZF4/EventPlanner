@@ -1,10 +1,3 @@
-//
-//  TextAlignment.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 6/30/23.
-//
-
 import Foundation
 import UIKit
 import SwiftUI

@@ -1,26 +1,23 @@
-//
-//  ContentView.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 6/30/23.
-//
-
 import SwiftUI
 
 struct HomeView: View {
-    var cards = events
+    @StateObject var eventVM = EventViewModel()
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    ForEach(cards, id: \.self) { card in
-                        EventView(eventLocation: card.eventLocation, evenTime: card.eventTime, groupName: card.groupName, eventName: card.eventName, eventDesc: card.eventDesc ?? "", groupColor: card.groupColor ?? "")
+                    ForEach(eventVM.events, id: \.self) { card in
+                            EventView(event: card)
                     }
                 }
                 .navigationTitle("117 Events")
                 .navigationBarTitleDisplayMode(.inline)
+                .onAppear {
+                    eventVM.fetchEvents()
+                }
             }
+           
         }
     }
 }

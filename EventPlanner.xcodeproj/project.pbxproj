@@ -19,6 +19,7 @@
 		9FDA5FF92A4F4F5300936D8A /* EventButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FF82A4F4F5300936D8A /* EventButton.swift */; };
 		9FDA5FFB2A4F557100936D8A /* LabelAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */; };
 		9FDA5FFD2A4F5A7400936D8A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA5FFC2A4F5A7400936D8A /* Event.swift */; };
+		C6275BED2A58805A00EC5DC5 /* CalenderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6275BEC2A58805A00EC5DC5 /* CalenderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9FDA5FF82A4F4F5300936D8A /* EventButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventButton.swift; sourceTree = "<group>"; };
 		9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAlignment.swift; sourceTree = "<group>"; };
 		9FDA5FFC2A4F5A7400936D8A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C6275BEC2A58805A00EC5DC5 /* CalenderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				9FDA5FF52A4F49C800936D8A /* Utility */,
 				9F1BFA992A55F28600D1ED17 /* App */,
 				9F1BFA982A55F26800D1ED17 /* View */,
+				C6275BE92A58801800EC5DC5 /* ViewModels */,
 				9F1BFA972A55F25900D1ED17 /* Model */,
 				9FDA5FE92A4F41E300936D8A /* Assets.xcassets */,
 				9FDA5FEB2A4F41E300936D8A /* Preview Content */,
@@ -129,6 +132,14 @@
 				9FDA5FFA2A4F557100936D8A /* LabelAlignment.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		C6275BE92A58801800EC5DC5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C6275BEC2A58805A00EC5DC5 /* CalenderViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				9F1BFA942A55EE4900D1ED17 /* MainTabView.swift in Sources */,
 				9FDA5FF42A4F41FD00936D8A /* EventView.swift in Sources */,
 				9F1BFA962A55EF2E00D1ED17 /* CalendarItem.swift in Sources */,
+				C6275BED2A58805A00EC5DC5 /* CalenderViewModel.swift in Sources */,
 				9FDA5FE82A4F41E100936D8A /* HomeView.swift in Sources */,
 				9FDA5FFD2A4F5A7400936D8A /* Event.swift in Sources */,
 				9FDA5FE62A4F41E100936D8A /* EventPlannerApp.swift in Sources */,

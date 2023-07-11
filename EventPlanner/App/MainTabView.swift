@@ -1,10 +1,3 @@
-//
-//  MainTabView.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 7/5/23.
-//
-
 import SwiftUI
 
 struct MainTabView: View {

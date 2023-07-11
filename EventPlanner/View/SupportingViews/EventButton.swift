@@ -1,15 +1,12 @@
-//
-//  EventButton.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 6/30/23.
-//
-
 import SwiftUI
 
 struct EventButton: View {
+    //var addedEvent: [Event]
+    
+    let action: () -> Void
+    
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: { action() }, label: {
             Text("Add to Calendar")
                 .foregroundColor(Color.white)
         })
@@ -22,7 +19,7 @@ struct EventButton: View {
 
 struct EventButton_Previews: PreviewProvider {
     static var previews: some View {
-        EventButton()
+        EventButton(action: {})
             .previewLayout(.sizeThatFits)
     }
 }
