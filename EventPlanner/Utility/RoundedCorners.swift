@@ -1,10 +1,3 @@
-//
-//  RoundedCorners.swift
-//  EventPlanner
-//
-//  Created by Zachary Farmer on 6/30/23.
-//
-
 import Foundation
 import SwiftUI
 

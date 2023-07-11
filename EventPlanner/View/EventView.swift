@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct EventView: View {
-    var eventLocation: String
-    var evenTime: String
-    var groupName: String
-    var eventName: String
-    var eventDesc: String
-    var groupColor: String
-    
+    @State var event: Event
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
@@ -24,7 +19,9 @@ struct EventView: View {
             
             VStack {
                 cardDeatil
-                EventButton()
+                EventButton(action: {
+                    
+                })
             }
             .padding(.bottom, 5)
         }
@@ -42,12 +39,12 @@ struct EventView: View {
                     HStack {
                         //Location
                         Image(systemName: "mappin")
-                        Text(eventLocation)
+                        Text(event.eventLocation)
                     }
                     HStack {
                         //Time
                         Image(systemName: "clock")
-                        Text(evenTime)
+                        Text(event.eventTime)
                     }
                 }
             }
@@ -55,10 +52,10 @@ struct EventView: View {
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
                         //Event Title
-                        Text(eventName)
+                    Text(event.eventName)
                             .bold()
                         //Event Details
-                        Text(eventDesc)
+                    Text(event.eventDesc ?? "No Data")
                     }
                 .padding(.leading, 7)
                 Spacer()
@@ -74,11 +71,11 @@ struct EventView: View {
     var groupCard: some View {
         VStack {
             HStack {
-                Text(groupName)
+                Text(event.groupName)
                     .font(.system(size: 20, weight: .heavy))
                     .frame(width: 50)
                     .padding(10)
-                    .background(Color(groupColor))
+                    .background(Color(event.groupColor ?? ""))
                     .cornerRadius(10, corners: [.topLeft,.bottomRight])
                     
                 Spacer()
@@ -86,10 +83,11 @@ struct EventView: View {
         }
         .frame(maxWidth: .infinity)
     }
+    
 }
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(eventLocation: example1.eventLocation, evenTime: example1.eventTime, groupName: example1.groupName, eventName: example1.eventName, eventDesc: example1.eventDesc ?? "", groupColor: example1.groupColor ?? "")
+        EventView(event: example1)
     }
 }
